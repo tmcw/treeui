@@ -8,8 +8,10 @@ A simple collapsible tree ui, for file selectors and the like.
 
 ## example
 
+[Live example on requirebin](http://requirebin.com/?gist=tmcw/9842067)
+
 ```js
-var treeui = require('./');
+var treeui = require('treeui');
 
 treeui(request)
     .onclick(function(level) {
