@@ -1,6 +1,6 @@
 {
   "name": "treeui",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "a tree user interface for files and other things",
   "main": "index.js",
   "scripts": {
