@@ -6,10 +6,12 @@ module.exports = function(request) {
         var item = ce('div', 'treeui-item');
         item.level = JSON.stringify(result);
 
-        var caret = append(item, ce('span', 'treeui-caret'));
-        caret.innerHTML = '▶';
-        caret.level = JSON.stringify(result);
-        ae(caret, 'click', toggle);
+        if (expandable(result)) {
+            var caret = append(item, ce('span', 'treeui-caret'));
+            caret.innerHTML = '▶';
+            caret.level = JSON.stringify(result);
+            ae(caret, 'click', toggle);
+        }
 
         var description = append(item, ce('span', 'treeui-label'));
         description.innerHTML = display(result);
@@ -23,6 +25,10 @@ module.exports = function(request) {
 
     var display = function(result) {
         return result;
+    };
+
+    var expandable = function(result) {
+        return true;
     };
 
     function toggle(e) {
@@ -65,6 +71,10 @@ module.exports = function(request) {
         },
         display: function(_) {
             display = _;
+            return treeui;
+        },
+        expandable: function(_) {
+            expandable = _;
             return treeui;
         }
     };
