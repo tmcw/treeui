@@ -14,7 +14,7 @@ module.exports = function(request) {
         }
 
         var description = append(item, ce('span', 'treeui-label'));
-        description.innerHTML = display(result);
+        description.textContent = display(result);
 
         ae(description, 'click', function(e) {
             onclick(JSON.parse(e.target.parentNode.level), e);
