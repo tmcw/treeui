@@ -1,5 +1,7 @@
 # treeui
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/tmcw/treeui.svg)](https://greenkeeper.io/)
+
 A simple collapsible tree ui, for file selectors and the like.
 
 ## install
